@@ -49,17 +49,21 @@ header{
   border: 10px double white;
   height: 150px;
 }
-#headerNav{
+#headerNav *{
   display: inline;
+  text-align: center;
 }
 ul{
-  text-align: center;
   display: inline;
   padding-top: 0px;
 }
 li{
   display: inline;
   padding: 0px 10px;
+}
+ol li {
+  display: list-item;
+  padding-left: 50px;
 }
 #inlineNav{
  text-align: center;

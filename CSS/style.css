@@ -13,13 +13,14 @@ h1{
 }
 h2{
   font-size: larger;
+  text-align: center;
+  padding-top: 200px;
 }
 h3{
   font-size: large;
   padding: 20px;
 }
 #topHeading{
-  padding-top: 200px;
 }
 img{
   width: 30%;
@@ -34,7 +35,6 @@ img{
 }
 #sanDiego{
   float: left;
-  padding-top: 200px;
 }
 #bourbonPic{
   float: right;

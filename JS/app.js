@@ -125,30 +125,33 @@ funQ();
 
 //Question 6*******
 
-var iUserGuess = prompt('Let\'s play a game! Haustin was born in May of 1991, what date was he born on? You\'ve got four chances to get it right!');
-var userGuess = parseInt(iUserGuess);
-var guessCount = 0;
-for (guessCount; guessCount < 4; guessCount++){
-  console.log('The user answered '+userGuess+ ' on guess number ' + (guessCount +1) + '.');
-  var chances = 4 - guessCount;
-  if (userGuess < 23){
-    iUserGuess = prompt('Nope! Sorry, you\'re too low. You\'ve got ' +chances+ ' chances left!');
-    userGuess = parseInt(iUserGuess);
+function guessBD(){
+  var iUserGuess = prompt('Let\'s play a game! Haustin was born in May of 1991, what date was he born on? You\'ve got four chances to get it right!');
+  var userGuess = parseInt(iUserGuess);
+  var guessCount = 0;
+  for (guessCount; guessCount < 4; guessCount++){
+    console.log('The user answered '+userGuess+ ' on guess number ' + (guessCount +1) + '.');
+    var chances = 4 - guessCount;
+    if (userGuess < 23){
+      iUserGuess = prompt('Nope! Sorry, you\'re too low. You\'ve got ' +chances+ ' chances left!');
+      userGuess = parseInt(iUserGuess);
+    }
+    else if (userGuess > 23){
+      iUserGuess = prompt('Nope! Sorry, you\'re too high. You\'ve got ' +chances+ ' chances left!');
+      userGuess = parseInt(iUserGuess);
+    }
+    else if(userGuess === 23){
+      alert('You got it right! Great job! He was born on 23 May 1991!');
+      numCorrect++;
+      break;
+    }
   }
-  else if (userGuess > 23){
-    iUserGuess = prompt('Nope! Sorry, you\'re too high. You\'ve got ' +chances+ ' chances left!');
-    userGuess = parseInt(iUserGuess);
-  }
-  else if(userGuess === 23){
-    alert('You got it right! Great job! He was born on 23 May 1991!');
-    numCorrect++;
-    break;
+  if (guessCount === 4){
+    alert('Sorry! You\'ve run out of guesses! The correct answer was 23!');
+    console.log('The user ran out of attempts for question 6');
   }
 }
-if (guessCount === 4){
-  alert('Sorry! You\'ve run out of guesses! The correct answer was 23!');
-  console.log('The user ran out of attempts for question 6');
-}
+guessBD();
 
 //Question 7
 const myGames = ['Runescape', 'Heroes of the Storm', 'Call of Duty', 'Halo', 'Pokemon'];

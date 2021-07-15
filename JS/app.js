@@ -153,32 +153,36 @@ function guessBD(){
 }
 guessBD();
 
-//Question 7
-const myGames = ['Runescape', 'Heroes of the Storm', 'Call of Duty', 'Halo', 'Pokemon'];
-var guessCount = 6;
-let correctGame = false;
-while (!correctGame && guessCount > 0){
-  var iUserGuess = prompt ('Now, a different game! Haustin has loved only a few video games over the years, what is one of them? You have ' +guessCount+ ' chances remaining!');
-  console.log('The user answered ' +iUserGuess+ '.');
-  var userGuess = iUserGuess.toLowerCase();
-  for (let i = 0; i < myGames.length; i++){
-    if(userGuess === myGames[i].toLowerCase()){
-      alert('Correct! ' +iUserGuess+ ' is one of his favorites! ' +myGames+ ' are all of the games he loves!');
-      correctGame = true;
-    }
-  }
-  if(correctGame){
-    numCorrect++;
-  }
-  else if (!correctGame && guessCount <= 6 && guessCount > 1){
-    alert('Nope! Try again!');
-  }
-  else if (!correctGame && guessCount === 1) {
-    alert('Sorry! You\'ve run out of guesses! Possible choices were ' +myGames+ '.');
-  }
-  guessCount--;
-}
 
+//Question 7
+
+function guessFavGame(){
+  const myGames = ['Runescape', 'Heroes of the Storm', 'Call of Duty', 'Halo', 'Pokemon'];
+  var guessCount = 6;
+  let correctGame = false;
+  while (!correctGame && guessCount > 0){
+    var iUserGuess = prompt ('Now, a different game! Haustin has loved only a few video games over the years, what is one of them? You have ' +guessCount+ ' chances remaining!');
+    console.log('The user answered ' +iUserGuess+ '.');
+    var userGuess = iUserGuess.toLowerCase();
+    for (let i = 0; i < myGames.length; i++){
+      if(userGuess === myGames[i].toLowerCase()){
+        alert('Correct! ' +iUserGuess+ ' is one of his favorites! ' +myGames+ ' are all of the games he loves!');
+        correctGame = true;
+      }
+    }
+    if(correctGame){
+      numCorrect++;
+    }
+    else if (!correctGame && guessCount <= 6 && guessCount > 1){
+      alert('Nope! Try again!');
+    }
+    else if (!correctGame && guessCount === 1) {
+      alert('Sorry! You\'ve run out of guesses! Possible choices were ' +myGames+ '.');
+    }
+    guessCount--;
+  }
+}
+guessFavGame();
 
 
 //Calculate total questions answered correctly and display a response based on how well they did.

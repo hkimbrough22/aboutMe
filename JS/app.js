@@ -1,8 +1,12 @@
 'use strict';
 //Get the user's name and print it on the website after the rest of the script
-let userName = prompt('Please enter your name');
-document.write("Hello, " + userName + ". Welcome!");
-console.log('The user\'s name is ' +userName);
+function userGreeting(){
+  let userName = prompt('Please enter your name');
+  document.write("Hello, " + userName + ". Welcome!");
+  console.log('The user\'s name is ' +userName);
+}
+userGreeting();
+
 
 //Question 1*******
 

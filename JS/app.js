@@ -1,5 +1,6 @@
 'use strict';
 //Get the user's name and print it on the website after the rest of the script
+
 function userGreeting(){
   let userName = prompt('Please enter your name');
   document.write("Hello, " + userName + ". Welcome!");
@@ -9,6 +10,7 @@ userGreeting();
 
 
 //Question 1*******
+
 function backgroundQ(){
   let iBackgroundQ = prompt('Haustin currently lives in Arizona, did he grow up there?');
   console.log('The user answered ' +iBackgroundQ+ ' to question 1.');
@@ -28,6 +30,7 @@ function backgroundQ(){
   }
 }
 backgroundQ();
+
 
 //Question 2*******
 
@@ -51,7 +54,9 @@ function educationQ(){
 }
 educationQ();
 
+
 //Question 3******
+
 function jobQ(){
   let iJobQ = prompt('He\'s been an Army brat, but was Haustin ever in the military?');
   console.log('The user answered ' +iJobQ+ ' to question 3.');
@@ -72,7 +77,9 @@ function jobQ(){
 }
 jobQ();
 
+
 //Question 4*******
+
 function goalsQ(){
   let iGoalsQ = prompt('Does Haustin want to be a software developer for the rest of his career?');
   console.log('The user answered ' +iGoalsQ+ ' to question 4.');
@@ -95,22 +102,25 @@ goalsQ();
 
 //Question 5*******
 
-let iFunQ = prompt('Does Haustin have any pets?');
-console.log('The user answered ' +iFunQ+ ' to question 5.');
-let funQ = iFunQ.toLowerCase();
+function funQ(){
+  let iFunQ = prompt('Does Haustin have any pets?');
+  console.log('The user answered ' +iFunQ+ ' to question 5.');
+  let funQ = iFunQ.toLowerCase();
 
-if(funQ === 'yes' || funQ === 'y'){
-  alert('DING DING DING!! Awesome! Haustin is a proud father to Bob Ross and Lenny Kravitz, two of the most spoiled kitties on the planet. You could probably include his daughter, Winter Sofia, on the list too since she is basically a wild animal.');
-  numCorrect++;
+  if(funQ === 'yes' || funQ === 'y'){
+    alert('DING DING DING!! Awesome! Haustin is a proud father to Bob Ross and Lenny Kravitz, two of the most spoiled kitties on the planet. You could probably include his daughter, Winter Sofia, on the list too since she is basically a wild animal.');
+    numCorrect++;
+  }
+
+  else if(funQ === 'no'|| funQ === 'n'){
+    alert('INCORRECT! He is a proud father to Bob Ross and Lenny Kravitz, two of the most spoiled kitties on the planet. Winter Sofia, his daughter, is also on the list since she is basically a wild animal.');
+  }  
+
+  else {
+      alert('Oops, that wasn\'t an option!');
+  }
 }
-
-else if(funQ === 'no'|| funQ === 'n'){
-  alert('INCORRECT! He is a proud father to Bob Ross and Lenny Kravitz, two of the most spoiled kitties on the planet. Winter Sofia, his daughter, is also on the list since she is basically a wild animal.');
-}  
-
-else {
-    alert('Oops, that wasn\'t an option!');
-}
+funQ();
 
 
 //Question 6*******

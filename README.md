@@ -2,7 +2,9 @@
 
 ## About Me
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+This website is about myself, Haustin Kimbrough.  The site is being slowly added to for Code 201. I have added improved functionality with the HTML, CSS, and JS. The website features pictures from the last few years of my life and contains my different social media and contact information.
+
+My most recent update has been to work with [Abdi Mohamed](https://github.com/abdimohamed121) to add JS functions for my introductory yes/no questions, guessing game questions, and score keeper. Abdi was the driver and I was the navigator for this.
 
 ### Author: Haustin Kimbrough
 
@@ -13,5 +15,4 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 <!-- Any Links you used as reference -->
 
 ### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+* Working with Abdi was fun. It went very smoothly. Not problems pushing or pulling from GitHub.

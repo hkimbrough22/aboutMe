@@ -9,23 +9,25 @@ userGreeting();
 
 
 //Question 1*******
+function backgroundQ(){
+  let iBackgroundQ = prompt('Haustin currently lives in Arizona, did he grow up there?');
+  console.log('The user answered ' +iBackgroundQ+ ' to question 1.');
+  let backgroundQ = iBackgroundQ.toLowerCase();
+  let numCorrect = 0;
+  if(backgroundQ === 'yes' || backgroundQ === 'y'){
+    alert('Nope! Kentucky is home, but Tennessee is a close second! Being an Army brat makes you a nomad if you didn\'t know!');
+  }
 
-let iBackgroundQ = prompt('Haustin currently lives in Arizona, did he grow up there?');
-console.log('The user answered ' +iBackgroundQ+ ' to question 1.');
-let backgroundQ = iBackgroundQ.toLowerCase();
-let numCorrect = 0;
-if(backgroundQ === 'yes' || backgroundQ === 'y'){
-  alert('Nope! Kentucky is home, but Tennessee is a close second! Being an Army brat makes you a nomad if you didn\'t know!');
+  else if(backgroundQ === 'no'|| backgroundQ === 'n'){
+    alert('Right you are! Kentucky is home and Tennessee is a close second!');
+    numCorrect++;
+  }  
+
+  else {
+      alert('Oops, that wasn\'t an option!');
+  }
 }
-
-else if(backgroundQ === 'no'|| backgroundQ === 'n'){
-  alert('Right you are! Kentucky is home and Tennessee is a close second!');
-  numCorrect++;
-}  
-
-else {
-    alert('Oops, that wasn\'t an option!');
-}
+backgroundQ();
 
 //Question 2*******
 

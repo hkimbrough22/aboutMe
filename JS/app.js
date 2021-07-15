@@ -52,24 +52,25 @@ function educationQ(){
 educationQ();
 
 //Question 3******
+function jobQ(){
+  let iJobQ = prompt('He\'s been an Army brat, but was Haustin ever in the military?');
+  console.log('The user answered ' +iJobQ+ ' to question 3.');
+  let jobQ = iJobQ.toLowerCase();
 
-let iJobQ = prompt('He\'s been an Army brat, but was Haustin ever in the military?');
-console.log('The user answered ' +iJobQ+ ' to question 3.');
-let jobQ = iJobQ.toLowerCase();
+  if(jobQ === 'yes' || jobQ === 'y'){
+    alert('That\'s right! He served for about seven years in the Army!');
+    numCorrect++;
+  }
 
-if(jobQ === 'yes' || jobQ === 'y'){
-  alert('That\'s right! He served for about seven years in the Army!');
-  numCorrect++;
+  else if(jobQ === 'no'|| jobQ === 'n'){
+    alert('Sorry, that\'s incorrect.  He served in the Army for about seven years!');
+  }  
+
+  else {
+      alert('Oops, that wasn\'t an option!');
+  }
 }
-
-else if(jobQ === 'no'|| jobQ === 'n'){
-  alert('Sorry, that\'s incorrect.  He served in the Army for about seven years!');
-}  
-
-else {
-    alert('Oops, that wasn\'t an option!');
-}
-
+jobQ();
 
 //Question 4*******
 

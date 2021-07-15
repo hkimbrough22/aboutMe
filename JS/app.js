@@ -73,24 +73,25 @@ function jobQ(){
 jobQ();
 
 //Question 4*******
+function goalsQ(){
+  let iGoalsQ = prompt('Does Haustin want to be a software developer for the rest of his career?');
+  console.log('The user answered ' +iGoalsQ+ ' to question 4.');
+  let goalsQ = iGoalsQ.toLowerCase();
 
-let iGoalsQ = prompt('Does Haustin want to be a software developer for the rest of his career?');
-console.log('The user answered ' +iGoalsQ+ ' to question 4.');
-let goalsQ = iGoalsQ.toLowerCase();
+  if(goalsQ === 'yes' || goalsQ === 'y'){
+    alert('Oh no! That\'s not right. He hopes to own his own his own business one day.');
+  }
 
-if(goalsQ === 'yes' || goalsQ === 'y'){
-  alert('Oh no! That\'s not right. He hopes to own his own his own business one day.');
+  else if(goalsQ === 'no'|| goalsQ === 'n'){
+    alert('Cooooooorrect! He hopes to own his own federal contracting business focusing on professional services procurement one day!');
+    numCorrect++;
+  }  
+
+  else {
+      alert('Oops, that wasn\'t an option!');
+  }
 }
-
-else if(goalsQ === 'no'|| goalsQ === 'n'){
-  alert('Cooooooorrect! He hopes to own his own federal contracting business focusing on professional services procurement one day!');
-  numCorrect++;
-}  
-
-else {
-    alert('Oops, that wasn\'t an option!');
-}
-
+goalsQ();
 
 //Question 5*******
 

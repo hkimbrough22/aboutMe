@@ -31,23 +31,25 @@ backgroundQ();
 
 //Question 2*******
 
-let iEducationQ = prompt('Has Haustin ever attended college?');
-console.log('The user answered ' +iEducationQ+ ' to question 2.');
-let educationQ = iEducationQ.toLowerCase();
+function educationQ(){
+  let iEducationQ = prompt('Has Haustin ever attended college?');
+  console.log('The user answered ' +iEducationQ+ ' to question 2.');
+  let educationQ = iEducationQ.toLowerCase();
 
-if(educationQ === 'yes' || educationQ === 'y'){
-  alert('Correct! Technically, three universities and one college! No degree yet, but he\'s still working on it!');
-  numCorrect++;
+  if(educationQ === 'yes' || educationQ === 'y'){
+    alert('Correct! Technically, three universities and one college! No degree yet, but he\'s still working on it!');
+    numCorrect++;
+  }
+
+  else if(educationQ === 'no'|| educationQ === 'n'){
+    alert('*insert loud buzzer sound* Wrong! He\'s got a few under his belt, but no degree!');
+  }  
+
+  else {
+      alert('Oops, that wasn\'t an option!');
+  }
 }
-
-else if(educationQ === 'no'|| educationQ === 'n'){
-  alert('*insert loud buzzer sound* Wrong! He\'s got a few under his belt, but no degree!');
-}  
-
-else {
-    alert('Oops, that wasn\'t an option!');
-}
-
+educationQ();
 
 //Question 3******
 

@@ -186,20 +186,22 @@ guessFavGame();
 
 
 //Calculate total questions answered correctly and display a response based on how well they did.
-if(numCorrect === 0){
-  alert('Yikes, ' +userName+ '. You got none right. Haustin is very disappointed.');
-}
-else if(numCorrect >= 1 && numCorrect <= 3){
-  alert('Uh oh, you only got ' + numCorrect + ' out of 5 questions right, ' +userName+ '. You better study up on Haustin!');
-}
-else if(numCorrect === 4 || numCorrect === 5){
-  alert('Not too bad, ' +userName+ '! You got ' +numCorrect+ ' out of 5 questions right. Enjoy some more information about Haustin!');
-}
-else{
-  alert('Wow! Great job, ' +userName+ '. You got ' +numCorrect+ ' out of 7 questions right! *cough* stalker *cough*');
-}
 
-
+function totalScore(){
+  if(numCorrect === 0){
+    alert('Yikes, ' +userName+ '. You got none right. Haustin is very disappointed.');
+  }
+  else if(numCorrect >= 1 && numCorrect <= 3){
+    alert('Uh oh, you only got ' + numCorrect + ' out of 5 questions right, ' +userName+ '. You better study up on Haustin!');
+  }
+  else if(numCorrect === 4 || numCorrect === 5){
+    alert('Not too bad, ' +userName+ '! You got ' +numCorrect+ ' out of 5 questions right. Enjoy some more information about Haustin!');
+  }
+  else{
+    alert('Wow! Great job, ' +userName+ '. You got ' +numCorrect+ ' out of 7 questions right! *cough* stalker *cough*');
+  }
+}
+totalScore();
 
 
 

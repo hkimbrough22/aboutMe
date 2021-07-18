@@ -1,10 +1,124 @@
 body *{
   box-sizing: border-box;
-  background-color: orange;
-  
-  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+body{
+  background-color: darkgray;
+}
+
 h1{
+  font-size: 3em;
+}
+
+h2{
+  font-size: 1.5em;
+}
+
+h3{
+  font-size: 1.25em;
+}
+
+p{
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+header{
+  background-color: lightgray;
+  margin-bottom: 50px;
+  padding: 20px 0px 0px 38%;
+  height: 150px;
+}
+nav *{
+  display: inline-block;
+  margin: 20px;
+  position:relative;
+  text-align: center;
+}
+
+#section1{
+  width: 50%;
+  margin-left: 25%;
+}
+
+img{
+  width: 25%;
+}
+
+#bourbonPic{
+  float: right;
+  padding-right: 10px;
+}
+
+#stickyRibs{
+  float: right;
+  padding-right: 10px;
+}
+
+article{
+  width: 30%;
+  float: left;
+  border: 5px solid black;
+  margin-top: 25px;
+}
+
+article:nth-child(1), article:nth-child(2){
+  margin-right: 1%;
+}
+
+#lastArticle img {
+  width: 35%
+}
+
+#lastSection{
+  display: inline-block;
+  padding-top: 10em;
+  margin-top: 10em;
+}
+
+#lastSection img{
+  padding-right: 5%;
+  padding-left: 1%;
+  margin-right: 8%;
+}
+
+article img, article h3, article p {
+  width: 75%;
+  margin: 10px auto 5px auto;
+  display: block;
+}
+
+#favAct{
+  position:absolute;
+  margin: 50px;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+footer{
+  height: 100px;
+  text-align: center;
+  padding: 50px;
+}
+
+footer ul li {
+  display: inline;
+  margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* h1{
   font-size: x-large;
   padding: 10px;
   margin-top: 20px;
@@ -20,28 +134,7 @@ h3{
   font-size: large;
   padding: 20px;
 }
-img{
-  width: 30%;
-  border-radius: 50px;
-  padding: 20px
-}
-#winterPic{
-  float: right;
-}
-#huntingPic{
-  float:none;
-}
-#sanDiego{
-  float: left;
-}
-#bourbonPic{
-  float: right;
-}
-#catPic{
-  float: right;
-}
 header{
-  position: fixed;
   top: 0px;
   width: 100%;
   background-image: url("../images/Fire.jpg");
@@ -49,10 +142,37 @@ header{
   border: 10px double white;
   height: 150px;
 }
-#headerNav *{
-  display: inline;
+#headerNav * {
+  display: block;
   text-align: center;
 }
+ div img{
+  width: 30%;
+  border-radius: 50px;
+  padding: 20px;
+  float: left;
+}
+#winterPic{
+  float: right;
+}
+#huntingPic{
+  float:left;
+}
+#sanDiego{
+  float: left;
+}
+#bourbonPic{
+  float: left;
+}
+#catPic{
+  float: left;
+  padding-right: 50px;
+}
+#deploymentPic {
+  float: left;
+  padding-right: 50px;
+}
+
 ul{
   display: inline;
   padding-top: 0px;
@@ -79,4 +199,4 @@ p{
 }
 figcaption{
   text-align: center;
-}
+} */

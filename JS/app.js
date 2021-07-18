@@ -1,13 +1,12 @@
 'use strict';
 //Get the user's name and print it on the website after the rest of the script
-
+let userName = prompt('Please enter your name');
 function userGreeting(){
-  let userName = prompt('Please enter your name');
   document.write("Hello, " + userName + ". Welcome!");
   console.log('The user\'s name is ' +userName);
 }
 userGreeting();
-
+let numCorrect = 0;
 
 //Question 1*******
 
@@ -15,7 +14,6 @@ function backgroundQ(){
   let iBackgroundQ = prompt('Haustin currently lives in Arizona, did he grow up there?');
   console.log('The user answered ' +iBackgroundQ+ ' to question 1.');
   let backgroundQ = iBackgroundQ.toLowerCase();
-  let numCorrect = 0;
   if(backgroundQ === 'yes' || backgroundQ === 'y'){
     alert('Nope! Kentucky is home, but Tennessee is a close second! Being an Army brat makes you a nomad if you didn\'t know!');
   }
@@ -126,31 +124,26 @@ funQ();
 //Question 6*******
 
 function guessBD(){
+  var guessCount = 0;
   var iUserGuess = prompt('Let\'s play a game! Haustin was born in May of 1991, what date was he born on? You\'ve got four chances to get it right!');
   var userGuess = parseInt(iUserGuess);
-  var guessCount = 0;
   for (guessCount; guessCount < 4; guessCount++){
+    var chances = 4 - guessCount -1;
     console.log('The user answered '+userGuess+ ' on guess number ' + (guessCount +1) + '.');
-    var chances = 4 - guessCount;
-    if (userGuess < 23){
-      iUserGuess = prompt('Nope! Sorry, you\'re too low. You\'ve got ' +chances+ ' chances left!');
-      userGuess = parseInt(iUserGuess);
-    }
-    else if (userGuess > 23){
-      iUserGuess = prompt('Nope! Sorry, you\'re too high. You\'ve got ' +chances+ ' chances left!');
-      userGuess = parseInt(iUserGuess);
-    }
-    else if(userGuess === 23){
+    if(userGuess === 23){
       alert('You got it right! Great job! He was born on 23 May 1991!');
       numCorrect++;
       break;
-    }
-  }
-  if (guessCount === 4){
-    alert('Sorry! You\'ve run out of guesses! The correct answer was 23!');
-    console.log('The user ran out of attempts for question 6');
-  }
-}
+    } else if (chances === 0){
+      alert('Sorry! You\'ve run out of guesses! The correct answer was 23!');
+      console.log('The user ran out of attempts for question 6');
+    } else if(userGuess < 23){
+      iUserGuess = prompt('Nope! Sorry, you\'re too low. You\'ve got ' +chances+ ' chances left!');
+      userGuess = parseInt(iUserGuess);
+    } else if (userGuess > 23){
+      iUserGuess = prompt('Nope! Sorry, you\'re too high. You\'ve got ' +chances+ ' chances left!');
+      userGuess = parseInt(iUserGuess);
+    }}}
 guessBD();
 
 
@@ -172,11 +165,9 @@ function guessFavGame(){
     }
     if(correctGame){
       numCorrect++;
-    }
-    else if (!correctGame && guessCount <= 6 && guessCount > 1){
+    } else if (!correctGame && guessCount <= 6 && guessCount > 1){
       alert('Nope! Try again!');
-    }
-    else if (!correctGame && guessCount === 1) {
+    } else if (!correctGame && guessCount === 1) {
       alert('Sorry! You\'ve run out of guesses! Possible choices were ' +myGames+ '.');
     }
     guessCount--;
@@ -192,46 +183,13 @@ function totalScore(){
     alert('Yikes, ' +userName+ '. You got none right. Haustin is very disappointed.');
   }
   else if(numCorrect >= 1 && numCorrect <= 3){
-    alert('Uh oh, you only got ' + numCorrect + ' out of 5 questions right, ' +userName+ '. You better study up on Haustin!');
+    alert('Uh oh, you only got ' + numCorrect + ' out of 7 questions right, ' +userName+ '. You better study up on Haustin!');
   }
   else if(numCorrect === 4 || numCorrect === 5){
-    alert('Not too bad, ' +userName+ '! You got ' +numCorrect+ ' out of 5 questions right. Enjoy some more information about Haustin!');
+    alert('Not too bad, ' +userName+ '! You got ' +numCorrect+ ' out of 7 questions right. Enjoy some more information about Haustin!');
   }
   else{
     alert('Wow! Great job, ' +userName+ '. You got ' +numCorrect+ ' out of 7 questions right! *cough* stalker *cough*');
   }
 }
 totalScore();
-
-
-
-
-// switch statements - used for lots of options
-
-// let funLevel = prompt('On a scale of 1 to 5, with 5 being the most fun, how fun was backgroundQ when you went');
-// console.log(typeof(funLevel));
-// let funLevelNum = parseInt(funLevel);
-//make a default if no number is given
-//another option is let funLevelNum = Number(funLevel);
-
-//debugger;
-
-// switch(funLevelNum){
-//   case 1:
-//     alert ('you should try again');
-//     break;
-//   case 2:
-//     alert ('should not have had the turkey leg');
-//     break;
-//   case 3:
-//     alert('awesome!');
-//     break;
-//   case 4:
-//     alert('awesome!');
-//     break;
-//   case 5:
-//     alert('awesome!');
-//     break;
-//   default:
-//     alert ('let me help you plan your next trip!');
-    //dont need a break because it's the last option

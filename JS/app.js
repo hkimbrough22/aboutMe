@@ -3,7 +3,6 @@
 let userName = prompt('Please enter your name');
 function userGreeting(){
   document.write("Hello, " + userName + ". Welcome!");
-  console.log('The user\'s name is ' +userName);
 }
 userGreeting();
 let numCorrect = 0;
@@ -12,7 +11,6 @@ let numCorrect = 0;
 
 function backgroundQ(){
   let iBackgroundQ = prompt('Haustin currently lives in Arizona, did he grow up there?');
-  console.log('The user answered ' +iBackgroundQ+ ' to question 1.');
   let backgroundQ = iBackgroundQ.toLowerCase();
   if(backgroundQ === 'yes' || backgroundQ === 'y'){
     alert('Nope! Kentucky is home, but Tennessee is a close second! Being an Army brat makes you a nomad if you didn\'t know!');
@@ -34,7 +32,6 @@ backgroundQ();
 
 function educationQ(){
   let iEducationQ = prompt('Has Haustin ever attended college?');
-  console.log('The user answered ' +iEducationQ+ ' to question 2.');
   let educationQ = iEducationQ.toLowerCase();
 
   if(educationQ === 'yes' || educationQ === 'y'){
@@ -57,7 +54,6 @@ educationQ();
 
 function jobQ(){
   let iJobQ = prompt('He\'s been an Army brat, but was Haustin ever in the military?');
-  console.log('The user answered ' +iJobQ+ ' to question 3.');
   let jobQ = iJobQ.toLowerCase();
 
   if(jobQ === 'yes' || jobQ === 'y'){
@@ -80,7 +76,6 @@ jobQ();
 
 function goalsQ(){
   let iGoalsQ = prompt('Does Haustin want to be a software developer for the rest of his career?');
-  console.log('The user answered ' +iGoalsQ+ ' to question 4.');
   let goalsQ = iGoalsQ.toLowerCase();
 
   if(goalsQ === 'yes' || goalsQ === 'y'){
@@ -102,7 +97,6 @@ goalsQ();
 
 function funQ(){
   let iFunQ = prompt('Does Haustin have any pets?');
-  console.log('The user answered ' +iFunQ+ ' to question 5.');
   let funQ = iFunQ.toLowerCase();
 
   if(funQ === 'yes' || funQ === 'y'){
@@ -129,14 +123,12 @@ function guessBD(){
   var userGuess = parseInt(iUserGuess);
   for (guessCount; guessCount < 4; guessCount++){
     var chances = 4 - guessCount -1;
-    console.log('The user answered '+userGuess+ ' on guess number ' + (guessCount +1) + '.');
     if(userGuess === 23){
       alert('You got it right! Great job! He was born on 23 May 1991!');
       numCorrect++;
       break;
     } else if (chances === 0){
       alert('Sorry! You\'ve run out of guesses! The correct answer was 23!');
-      console.log('The user ran out of attempts for question 6');
     } else if(userGuess < 23){
       iUserGuess = prompt('Nope! Sorry, you\'re too low. You\'ve got ' +chances+ ' chances left!');
       userGuess = parseInt(iUserGuess);
@@ -155,7 +147,6 @@ function guessFavGame(){
   let correctGame = false;
   while (!correctGame && guessCount > 0){
     var iUserGuess = prompt ('Now, a different game! Haustin has loved only a few video games over the years, what is one of them? You have ' +guessCount+ ' chances remaining!');
-    console.log('The user answered ' +iUserGuess+ '.');
     var userGuess = iUserGuess.toLowerCase();
     for (let i = 0; i < myGames.length; i++){
       if(userGuess === myGames[i].toLowerCase()){
